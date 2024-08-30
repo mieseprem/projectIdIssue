@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: demo
+
+#  config:
+#    # if vv is enabled, spring.cloud.gcp.project-id from xxx profile is ignored
+#    import: sm://
+
+#  cloud:
+#    gcp:
+#      secretmanager:
+#        # if vv is enabled, the GcpProjectIdProvider will have a valid project id again
+#        # but the variable is not resolved
+#        project-id: ${spring.cloud.gcp.project-id}
+
+---
+spring:
+  config:
+    activate:
+      on-profile: xxx
+  cloud:
+    gcp:
+      # vv is ignored as of presence of property: spring.config.import
+      project-id: my-project-id
