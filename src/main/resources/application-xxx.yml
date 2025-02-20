@@ -1,0 +1,5 @@
+spring:
+  cloud:
+    gcp:
+      # vv is ignored as of presence of property: spring.config.import
+      project-id: my-project-id
